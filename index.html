@@ -1,0 +1,104 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Google Play Store Apps Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container" id=nav_color>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand bg-primary" href="index.html">Google Play Store</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                            aria-expanded="false">
+                            Rating
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Type_rating.html">Average Rating Per Type</a></li>
+                            <li><a href="Category.html">Average Rating Per Category</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="MaxReviews.html">Reviews</a></li>
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <h2 class="panel-body text-primary">Google Play Store App</h2>
+                    <hr class="hr_style">
+                    <img src="images/AppsInEachCategory.png" alt="App Count per category" class="left_small panel-body">
+                    <p class=panel-body>
+                        The purpose of this project was to analyze Google Play Store Apps. We wanted to see the relation between
+						Number of Reviews and Types of Apps available. 
+                        <br>
+                        <br>
+                        After assembling the dataset, we used Matplotlib to plot various
+                        aspects of the Google Play store App. Factors we looked at included:
+                        App Categories, Average Ratings Per App, Average Rating per Category, and Maximum Reviews Per App. 
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3 class="text-primary">Vizualization</h3>
+                        <hr class="hr_style">
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-3 col-md-6">
+                                <a href="Type_rating.html" class="thumbnail">
+                                    <img src="images/RatingPerType.png" alt="Rating Per App Type">
+                                </a>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-6">
+                                <a href="Category.html" class="thumbnail">
+                                    <img src="images/CategoryRating.png" alt="Rating Per Category">
+                                </a>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-6">
+                                <a href="MaxReviews.html" class="thumbnail">
+                                    <img src="images/MaxReviews.png" alt="Maximum number of Reviews">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
