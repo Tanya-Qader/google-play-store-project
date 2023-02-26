@@ -10,11 +10,12 @@ from flask import Flask
 from flask import render_template
 from flask import jsonify
 import psycopg2
+from config import username, password
 
 #################################################
 # Database Setup
 #################################################
-engine = create_engine("postgresql+psycopg2://postgres:5676@localhost:5432/playstore_db")
+engine = create_engine(f"postgresql+psycopg2://{username}:{password}@localhost:5432/playstore_db")
 
 # reflect an existing database into a new model
 Base = automap_base()
@@ -94,7 +95,7 @@ def max_reviews():
     App_list = []
     for App, Reviews in results:
         App_dict = {}
-        App_dict["Type"] = App
+        App_dict["App"] = App
         App_dict["Reviews"] = Reviews
         App_list.append(App_dict)
 

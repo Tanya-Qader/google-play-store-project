@@ -1,8 +1,83 @@
-<html>
- <head>
-   <title>Flask Static Demo</title>
- </head>
- <body>
-   <h1>Hello</h1>
- </body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Play Store Data Visualization</title>
+    <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
+    <script src="https://unpkg.com/recharts/umd/Recharts.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script>
+    const {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip} = Recharts;
+    class App extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                avgCatRatingData: [],
+                maxRevData: [],
+                avgTypeRatingData: []
+            };
+        }
+
+        componentDidMount() {
+            axios.get('/average_category_rating')
+                .then(response => {
+                    this.setState({avgCatRatingData: response.data})
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+            axios.get('/max_reviews')
+                .then(response => {
+                    this.setState({maxRevData: response.data})
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+            axios.get('/average_type_rating')
+                .then(response => {
+                    this.setState({avgTypeRatingData: response.data})
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+        }
+
+        render() {
+            return (
+                <div>
+                    <h1>Play Store Data Visualization</h1>
+                    <h2>Average Category Rating</h2>
+                    <BarChart width={800} height={400} data={this.state.avgCatRatingData}>
+                        <CartesianGrid strokeDasharray="3 3"/>
+                        <XAxis dataKey="Category"/>
+                        <YAxis/>
+                        <Tooltip/>
+                        <Bar dataKey="Rating" fill="#8884d8"/>
+                    </BarChart>
+                    <h2>Maximum Reviews</h2>
+                    <BarChart width={800} height={400} data={this.state.maxRevData}>
+                        <CartesianGrid strokeDasharray="3 3"/>
+                        <XAxis dataKey="App"/>
+                        <YAxis/>
+                        <Tooltip/>
+                        <Bar dataKey="Reviews" fill="#82ca9d"/>
+                    </BarChart>
+                    <h2>Average Type Rating</h2>
+                    <PieChart width={800} height={400}>
+                        <Pie data={this.state.avgTypeRatingData} dataKey="Rating" nameKey="Type" cx="50%" cy="50%" outerRadius={80} fill="#8884d8" label/>
+                        <Tooltip/>
+                    </PieChart>
+                </div>
+            )
+        }
+    }
+
+    // ReactDOM.render(<App/>, document.getElementById('root'));
+</script>
+</body>
 </html>
