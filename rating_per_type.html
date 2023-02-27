@@ -6,7 +6,6 @@
     <title>Average Rating Per Type of App</title>
     <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
 
-
     <!-- Bootstrap CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -58,21 +57,21 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="panel panel-default">
-                    <h2 class="panel-body text-primary">Maximum Reviews Per Category</h2>
+                    <h2 class="panel-body text-primary">Average Rating Per App Type</h2>
                     <hr class="hr_style">
                     <!-- <a href="rating_per_type.html" class="thumbnail"></a> -->
                     <!-- <img src="images/RatingPerType.png" alt="rating per type" class="left_small panel-body"> -->
                     <p class=panel-body>
-                       talk aboout reviews 
+                        There are 93% Free App vs 7% Paid App available on Google Play Store. However, the average rating per type of
+                        App is almost 50/50. 
                 
                     </p>
                 </div>
-
-    <div id="1c5d39b2b37847af954b0ee08dbea37f" class="chart-container" style="width:900px; height:500px; "></div>
+                <div id="6b5740bfcd334c18b9ae12ab101526de" class="chart-container" style="width:900px; height:500px; "></div>
     <script>
-        var chart_1c5d39b2b37847af954b0ee08dbea37f = echarts.init(
-            document.getElementById('1c5d39b2b37847af954b0ee08dbea37f'), 'white', {renderer: 'canvas'});
-        var option_1c5d39b2b37847af954b0ee08dbea37f = {
+        var chart_6b5740bfcd334c18b9ae12ab101526de = echarts.init(
+            document.getElementById('6b5740bfcd334c18b9ae12ab101526de'), 'white', {renderer: 'canvas'});
+        var option_6b5740bfcd334c18b9ae12ab101526de = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -97,85 +96,75 @@
     ],
     "series": [
         {
-            "type": "bar",
+            "type": "pie",
+            "colorBy": "data",
             "legendHoverLink": true,
+            "selectedMode": false,
+            "selectedOffset": 10,
+            "clockwise": true,
+            "startAngle": 90,
+            "minAngle": 0,
+            "minShowLabelAngle": 0,
+            "avoidLabelOverlap": true,
+            "stillShowZeroSum": true,
+            "percentPrecision": 2,
+            "showEmptyCircle": true,
+            "emptyCircleStyle": {
+                "color": "lightgray",
+                "borderColor": "#000",
+                "borderWidth": 0,
+                "borderType": "solid",
+                "borderDashOffset": 0,
+                "borderCap": "butt",
+                "borderJoin": "bevel",
+                "borderMiterLimit": 10,
+                "opacity": 1
+            },
             "data": [
-                78158306,
-                69119316,
-                66577313,
-                56642847,
-                44891723,
-                42916526,
-                27722264,
-                25655305,
-                24900999,
-                23133508,
-                22426677,
-                17712922,
-                17014787,
-                16771865,
-                14891223,
-                14198297,
-                13479633,
-                12842860,
-                12759663,
-                11667403
+                {
+                    "name": "Free",
+                    "value": 4.166372497365648
+                },
+                {
+                    "name": "Paid",
+                    "value": 4.259602649006623
+                }
             ],
-            "realtimeSort": false,
-            "showBackground": false,
-            "stackStrategy": "samesign",
-            "cursor": "pointer",
-            "barMinHeight": 0,
-            "barCategoryGap": "20%",
-            "barGap": "30%",
-            "large": false,
-            "largeThreshold": 400,
-            "seriesLayoutBy": "column",
-            "datasetIndex": 0,
-            "clip": true,
-            "zlevel": 0,
-            "z": 2,
+            "radius": [
+                "30%",
+                "75%"
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
             "label": {
                 "show": true,
-                "margin": 8
+                "position": "inner",
+                "margin": 8,
+                "formatter": "{b}: {c} ({d}%)"
             },
-            "itemStyle": {
-                "color": [
-                    "#003f5c",
-                    "#2f4b7c",
-                    "#665191",
-                    "#a05195",
-                    "#d45087",
-                    "#f95d6a",
-                    "#ff7c43",
-                    "#ffa600",
-                    "#a6bddb",
-                    "#67a9cf",
-                    "#3690c0",
-                    "#02818a",
-                    "#016c59",
-                    "#2c7f7f",
-                    "#253494",
-                    "#1d3d58"
-                ]
-            },
-            "rippleEffect": {
+            "labelLine": {
                 "show": true,
-                "brushType": "stroke",
-                "scale": 2.5,
-                "period": 4
+                "showAbove": false,
+                "length": 15,
+                "length2": 15,
+                "smooth": false,
+                "minTurnAngle": 90,
+                "maxSurfaceAngle": 90
             }
         }
     ],
     "legend": [
         {
             "data": [
-                ""
+                "Free",
+                "Paid"
             ],
-            "selected": {
-                "": true
-            },
+            "selected": {},
             "show": true,
+            "left": "left",
+            "orient": "vertical",
             "padding": 5,
             "itemGap": 10,
             "itemWidth": 25,
@@ -219,90 +208,12 @@
         "padding": 5,
         "order": "seriesAsc"
     },
-    "xAxis": [
-        {
-            "show": true,
-            "scale": false,
-            "nameLocation": "end",
-            "nameGap": 15,
-            "gridIndex": 0,
-            "axisLabel": {
-                "rotate": 20,
-                "font_size": 12,
-                "font_weight": "bold"
-            },
-            "inverse": false,
-            "offset": 0,
-            "splitNumber": 5,
-            "minInterval": 0,
-            "splitLine": {
-                "show": true,
-                "lineStyle": {
-                    "show": true,
-                    "width": 1,
-                    "opacity": 1,
-                    "curveness": 0,
-                    "type": "solid"
-                }
-            },
-            "data": [
-                "Facebook",
-                "WhatsApp Messenger",
-                "Instagram",
-                "Messenger \u2013 Text and Video Chat for Free",
-                "Clash of Clans",
-                "Clean Master- Space Cleaner & Antivirus",
-                "Subway Surfers",
-                "YouTube",
-                "Security Master - Antivirus, VPN, AppLock, Booster",
-                "Clash Royale",
-                "Candy Crush Saga",
-                "UC Browser - Fast Download Private & Secure",
-                "Snapchat",
-                "360 Security - Free Antivirus, Booster, Cleaner",
-                "My Talking Tom",
-                "8 Ball Pool",
-                "DU Battery Saver - Battery Charger & Battery Life",
-                "BBM - Free Calls & Messages",
-                "Cache Cleaner-DU Speed Booster (booster & cleaner)",
-                "Twitter"
-            ]
-        }
-    ],
-    "yAxis": [
-        {
-            "show": true,
-            "scale": false,
-            "nameLocation": "end",
-            "nameGap": 15,
-            "gridIndex": 0,
-            "axisLabel": {
-                "font_size": 12,
-                "font_weight": "bold"
-            },
-            "inverse": false,
-            "offset": 0,
-            "splitNumber": 5,
-            "minInterval": 0,
-            "splitLine": {
-                "show": true,
-                "lineStyle": {
-                    "show": true,
-                    "width": 1,
-                    "opacity": 1,
-                    "curveness": 0,
-                    "type": "solid"
-                }
-            }
-        }
-    ],
     "title": [
         {
             "show": true,
-            "text": "Maximum number of Reviews per App (Top 20)",
+            "text": "Average Rating Per App Type",
             "target": "blank",
             "subtarget": "blank",
-            "left": "center",
             "padding": 5,
             "itemGap": 10,
             "textAlign": "auto",
@@ -311,9 +222,9 @@
         }
     ]
 };
-        chart_1c5d39b2b37847af954b0ee08dbea37f.setOption(option_1c5d39b2b37847af954b0ee08dbea37f);
+        chart_6b5740bfcd334c18b9ae12ab101526de.setOption(option_6b5740bfcd334c18b9ae12ab101526de);
+
     </script>
-</script>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
@@ -343,4 +254,166 @@
         </div>
     </div>
 </body>
+
 </html>
+
+
+    <!-- <div id="6b5740bfcd334c18b9ae12ab101526de" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+        var chart_6b5740bfcd334c18b9ae12ab101526de = echarts.init(
+            document.getElementById('6b5740bfcd334c18b9ae12ab101526de'), 'white', {renderer: 'canvas'});
+        var option_6b5740bfcd334c18b9ae12ab101526de = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "colorBy": "data",
+            "legendHoverLink": true,
+            "selectedMode": false,
+            "selectedOffset": 10,
+            "clockwise": true,
+            "startAngle": 90,
+            "minAngle": 0,
+            "minShowLabelAngle": 0,
+            "avoidLabelOverlap": true,
+            "stillShowZeroSum": true,
+            "percentPrecision": 2,
+            "showEmptyCircle": true,
+            "emptyCircleStyle": {
+                "color": "lightgray",
+                "borderColor": "#000",
+                "borderWidth": 0,
+                "borderType": "solid",
+                "borderDashOffset": 0,
+                "borderCap": "butt",
+                "borderJoin": "bevel",
+                "borderMiterLimit": 10,
+                "opacity": 1
+            },
+            "data": [
+                {
+                    "name": "Free",
+                    "value": 4.166372497365648
+                },
+                {
+                    "name": "Paid",
+                    "value": 4.259602649006623
+                }
+            ],
+            "radius": [
+                "30%",
+                "75%"
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
+            "label": {
+                "show": true,
+                "position": "inner",
+                "margin": 8,
+                "formatter": "{b}: {c} ({d}%)"
+            },
+            "labelLine": {
+                "show": true,
+                "showAbove": false,
+                "length": 15,
+                "length2": 15,
+                "smooth": false,
+                "minTurnAngle": 90,
+                "maxSurfaceAngle": 90
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Free",
+                "Paid"
+            ],
+            "selected": {},
+            "show": true,
+            "left": "left",
+            "orient": "vertical",
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderWidth": 1,
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "Average Rating Per App Type",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ]
+};
+        chart_6b5740bfcd334c18b9ae12ab101526de.setOption(option_6b5740bfcd334c18b9ae12ab101526de);
+    </script>
+</body>
+</html> -->

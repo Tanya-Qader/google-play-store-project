@@ -33,7 +33,7 @@ img {
 .left_small {
     float: middle;
     height: 80%;
-    width: 90%;
+    width: 100%;
     overflow: auto;
 }
 
