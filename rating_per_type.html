@@ -47,7 +47,7 @@
                             <li><a href="CategoryRating.html">Average Rating Per Category</a></li>
                         </ul>
                     </li>
-                    <li><a href="MaxReviews.html">Reviews</a></li>
+                    <li><a href="RatingVsReviews.html">Reviews</a></li>
                 
                 </ul>
             </div>
@@ -58,16 +58,15 @@
             <div class="col-md-8">
                 <div class="panel panel-default">
                     <h2 class="panel-body text-primary">Average Rating Per App Type</h2>
-                    <hr class="hr_style">
-                    <!-- <a href="rating_per_type.html" class="thumbnail"></a> -->
-                    <!-- <img src="images/RatingPerType.png" alt="rating per type" class="left_small panel-body"> -->
                     <p class=panel-body>
-                        There are 93% Free App vs 7% Paid App available on Google Play Store. However, the average rating per type of
-                        App is almost 50/50. 
+                        There are two types of Apps available on Google play store, Free and Paid Apps. We analyzed that 
+                        the 93% of Apps are Free while the remaining only 7% of the Apps are paid. Despite a huge gap between
+                        the number of Apps we have almost equal average rating for both. The average rating for Free App 
+                        is 4.1 (49.45%) and for Paid App is 4.2 (50.55%). Total Number of 8719 free apps and 647 Paid Apps. 
                 
                     </p>
                 </div>
-                <div id="6b5740bfcd334c18b9ae12ab101526de" class="chart-container" style="width:900px; height:500px; "></div>
+                <div id="6b5740bfcd334c18b9ae12ab101526de" class="chart-container" style="width:850px; height:400px; "></div>
     <script>
         var chart_6b5740bfcd334c18b9ae12ab101526de = echarts.init(
             document.getElementById('6b5740bfcd334c18b9ae12ab101526de'), 'white', {renderer: 'canvas'});
@@ -123,11 +122,11 @@
             "data": [
                 {
                     "name": "Free",
-                    "value": 4.166372497365648
+                    "value": 4.16
                 },
                 {
                     "name": "Paid",
-                    "value": 4.259602649006623
+                    "value": 4.25
                 }
             ],
             "radius": [
@@ -178,7 +177,7 @@
             "pageFormatter": "{current}/{total}",
             "pageIconColor": "#2f4554",
             "pageIconInactiveColor": "#aaa",
-            "pageIconSize": 15,
+            "pageIconSize": 25,
             "animationDurationUpdate": 800,
             "selector": false,
             "selectorPosition": "auto",
@@ -208,19 +207,19 @@
         "padding": 5,
         "order": "seriesAsc"
     },
-    "title": [
-        {
-            "show": true,
-            "text": "Average Rating Per App Type",
-            "target": "blank",
-            "subtarget": "blank",
-            "padding": 5,
-            "itemGap": 10,
-            "textAlign": "auto",
-            "textVerticalAlign": "auto",
-            "triggerEvent": false
-        }
-    ]
+    // "title": [
+    //     {
+    //         "show": true,
+    //         "text": "Average Rating Per App Type",
+    //         "target": "blank",
+    //         "subtarget": "blank",
+    //         "padding": 5,
+    //         "itemGap": 10,
+    //         "textAlign": "right",
+    //         "textVerticalAlign": "auto",
+    //         "triggerEvent": false
+    //     }
+    // ]
 };
         chart_6b5740bfcd334c18b9ae12ab101526de.setOption(option_6b5740bfcd334c18b9ae12ab101526de);
 

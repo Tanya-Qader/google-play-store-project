@@ -1,6 +1,6 @@
 body { 
-    padding-top: 100px; 
-    background-color: lightgrey;
+    padding-top: 70px; 
+    background-color: rgb(255, 255, 255);
 }
 
 img {
@@ -31,8 +31,8 @@ img {
 }
 
 .left_small {
-    float: middle;
-    height: 80%;
+    float: auto;
+    height: 60%;
     width: 100%;
     overflow: auto;
 }
@@ -46,4 +46,11 @@ img {
     background-color:white;
 }
 
+}
+
+.graph_design {
+    float: auto;
+    height: 550;
+    width: 750;
+    overflow: auto;
 }
