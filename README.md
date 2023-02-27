@@ -1,4 +1,4 @@
-<img src="https://user-images.githubusercontent.com/116117065/221444085-dcad0576-b19b-426c-82be-66ec60c567c8.png"  width="600" height="300">
+<img src="https://user-images.githubusercontent.com/116117065/221680514-f761397f-05c3-4015-b987-5a63c2a0120b.png"  width="380" height="130">
 
 We will analyze the dataset to understand the relation between App Ratings based on App Type/Category and also discover which app has the maximum number of reviews using EDA & Data Visualization.
 
@@ -7,6 +7,10 @@ We will be using the following dataset from Kaggle which contains different play
 Dataset: Google Play Store Apps | Kaggle  
 
 Dataset Link: [https://www.kaggle.com/datasets/lava18/google-play-store-apps](https://www.kaggle.com/datasets/lava18/google-play-store-apps)
+
+
+![image](https://user-images.githubusercontent.com/116117065/221661520-1049ffdf-7000-4f0d-8e04-cd954e9efb0c.png)
+
 
 ## Requirements:
 
@@ -20,6 +24,9 @@ Dataset Link: [https://www.kaggle.com/datasets/lava18/google-play-store-apps](ht
 5. Your project must include some level of user-driven interaction (e.g., menus, dropdowns, textboxes).
 6. Your final visualization should ideally include at least three views.
 
+## Dashboard View
+
+![image](https://user-images.githubusercontent.com/116117065/221679886-cdc647eb-d415-41ac-96ea-41ca18f172c2.png)
 
 
 
