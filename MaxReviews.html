@@ -1,0 +1,315 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Average Rating Per Type of App</title>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/themes/walden.js"></script> -->
+
+
+    <!-- Bootstrap CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container" id=nav_color>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand bg-primary" href="index.html">Google Play Store</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                            aria-expanded="false">
+                            Rating
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="rating_per_type.html">Average Rating Per Type</a></li>
+                            <li><a href="CategoryRating.html">Average Rating Per Category</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="RatingVsReviews.html">Reviews</a></li>
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <h2 class="panel-body text-primary">Maximum Reviews Per Category</h2>
+                    <p class=panel-body>
+                    Family category has the highest number of app appearances followed by Game and Tool. We can also see the apps such 
+                    as Facebook/Instagram, Clash of Clans/Subway surfers and Antivirus/Battery Life has the maximum number of reviews 
+                    which falls under the same categories as well. We can conclude that maximum numbers of apps has the maximum 
+                    number of reviews as well. 
+                
+                    </p>
+                </div>
+
+                <div id="ca9a1daff3554f05b5085008cb072ec2" class="chart-container" style="width:850px; height:400px; "></div>
+                <script>
+                    var chart_ca9a1daff3554f05b5085008cb072ec2 = echarts.init(
+                        document.getElementById('ca9a1daff3554f05b5085008cb072ec2'), 'walden', {renderer: 'canvas'});
+                    var option_ca9a1daff3554f05b5085008cb072ec2 = {
+                "animation": true,
+                "animationThreshold": 2000,
+                "animationDuration": 1000,
+                "animationEasing": "cubicOut",
+                "animationDelay": 0,
+                "animationDurationUpdate": 300,
+                "animationEasingUpdate": "cubicOut",
+                "animationDelayUpdate": 0,
+                "aria": {
+                    "enabled": false
+                },
+                "series": [
+                    {
+                        "type": "bar",
+                        "legendHoverLink": true,
+                        "data": [
+                            78158306,
+                            69119316,
+                            66577313,
+                            56642847,
+                            44891723,
+                            42916526,
+                            27722264,
+                            25655305,
+                            24900999,
+                            23133508,
+                            22426677,
+                            17712922,
+                            17014787,
+                            16771865,
+                            14891223,
+                            14198297,
+                            13479633,
+                            12842860,
+                            12759663,
+                            11667403
+                        ],
+                        "realtimeSort": false,
+                        "showBackground": false,
+                        "stackStrategy": "samesign",
+                        "cursor": "pointer",
+                        "barMinHeight": 0,
+                        "barCategoryGap": "20%",
+                        "barGap": "30%",
+                        "large": false,
+                        "largeThreshold": 400,
+                        "seriesLayoutBy": "column",
+                        "datasetIndex": 0,
+                        "clip": true,
+                        "zlevel": 0,
+                        "z": 2,
+                        "label": {
+                            "show": false,
+                            "margin": 8
+                        },
+                        "rippleEffect": {
+                            "show": true,
+                            "brushType": "stroke",
+                            "scale": 2.5,
+                            "period": 4
+                        }
+                    }
+                ],
+                "legend": [
+                    {
+                        "data": [
+                            ""
+                        ],
+                        "selected": {
+                            "": true
+                        },
+                        "show": true,
+                        "padding": 5,
+                        "itemGap": 10,
+                        "itemWidth": 25,
+                        "itemHeight": 14,
+                        "backgroundColor": "transparent",
+                        "borderColor": "#ccc",
+                        "borderWidth": 1,
+                        "borderRadius": 0,
+                        "pageButtonItemGap": 5,
+                        "pageButtonPosition": "end",
+                        "pageFormatter": "{current}/{total}",
+                        "pageIconColor": "#2f4554",
+                        "pageIconInactiveColor": "#aaa",
+                        "pageIconSize": 15,
+                        "animationDurationUpdate": 800,
+                        "selector": false,
+                        "selectorPosition": "auto",
+                        "selectorItemGap": 7,
+                        "selectorButtonGap": 10
+                    }
+                ],
+                "tooltip": {
+                    "show": true,
+                    "trigger": "item",
+                    "triggerOn": "mousemove|click",
+                    "axisPointer": {
+                        "type": "line"
+                    },
+                    "showContent": true,
+                    "alwaysShowContent": false,
+                    "showDelay": 0,
+                    "hideDelay": 100,
+                    "enterable": false,
+                    "confine": false,
+                    "appendToBody": false,
+                    "transitionDuration": 0.4,
+                    "textStyle": {
+                        "fontSize": 14
+                    },
+                    "borderWidth": 0,
+                    "padding": 5,
+                    "order": "seriesAsc"
+                },
+                "xAxis": [
+                    {
+                        "show": true,
+                        "scale": false,
+                        "nameLocation": "end",
+                        "nameGap": 15,
+                        "gridIndex": 0,
+                        "axisLabel": {
+                            "rotate": 28,
+                            "font_size": 10,
+                            "font_weight": "bold"
+                        },
+                        "inverse": false,
+                        "offset": 0,
+                        "splitNumber": 5,
+                        "minInterval": 0,
+                        "splitLine": {
+                            "show": true,
+                            "lineStyle": {
+                                "show": true,
+                                "width": 1,
+                                "opacity": 1,
+                                "curveness": 0,
+                                "type": "solid"
+                            }
+                        },
+                        "data": [
+                            "Facebook",
+                            "WhatsApp Messenger",
+                            "Instagram",
+                            "Messenger",
+                            "Clash of Clans",
+                            "Clean Master",
+                            "Subway Surfers",
+                            "YouTube",
+                            "Security Master",
+                            "Clash Royale",
+                            "Candy Crush Saga",
+                            "UC Browser",
+                            "Snapchat",
+                            "360 Security",
+                            "My Talking Tom",
+                            "8 Ball Pool",
+                            "DU Battery Saver",
+                            "BBM - Free Calls & Messages",
+                            "Cache Cleaner-DU Speed Booster",
+                            "Twitter"
+                        ]
+                    }
+                ],
+                "yAxis": [
+                    {
+                        "show": true,
+                        "scale": false,
+                        "nameLocation": "end",
+                        "nameGap": 15,
+                        "gridIndex": 0,
+                        "axisLabel": {
+                            "font_size": 12,
+                            "font_weight": "bold"
+                        },
+                        "inverse": false,
+                        "offset": 0,
+                        "splitNumber": 5,
+                        "minInterval": 0,
+                        "splitLine": {
+                            "show": true,
+                            "lineStyle": {
+                                "show": true,
+                                "width": 1,
+                                "opacity": 1,
+                                "curveness": 0,
+                                "type": "solid"
+                            }
+                        }
+                    }
+                ],
+                // "title": [
+                //     {
+                //         "show": true,
+                //         "text": "Maximum number of Reviews per App (Top 20)",
+                //         "target": "blank",
+                //         "subtarget": "blank",
+                //         "left": "center",
+                //         "padding": 5,
+                //         "itemGap": 10,
+                //         "textAlign": "auto",
+                //         "textVerticalAlign": "auto",
+                //         "triggerEvent": false
+                //     }
+                // ]
+            };
+                    chart_ca9a1daff3554f05b5085008cb072ec2.setOption(option_ca9a1daff3554f05b5085008cb072ec2);
+                </script>            
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3 class="text-primary">Vizualization</h3>
+                        <hr class="hr_style">
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-3 col-md-6">
+                                <a href="rating_per_type.html" class="thumbnail">
+                                    <img src="images/RatingPerType.png" alt="Rating Per App Type">
+                                </a>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-6">
+                                <a href="CategoryRating.html" class="thumbnail">
+                                    <img src="images/CategoryRating.png" alt="Rating Per Category">
+                                </a>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-6">
+                                <a href="MaxReviews.html" class="thumbnail">
+                                    <img src="images/MaxReviews.png" alt="Maximum number of Reviews">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> -->

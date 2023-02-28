@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Average Rating Per Type of App</title>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/themes/macarons.js"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container" id=nav_color>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand bg-primary" href="index.html">Google Play Store</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                            aria-expanded="false">
+                            Rating
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="rating_per_type.html">Average Rating Per Type</a></li>
+                            <li><a href="CategoryRating.html">Average Rating Per Category</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="RatingVsReviews.html">Reviews</a></li>
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <h2 class="panel-body text-primary">Average Rating Per Category</h2>
+                    <!-- <hr class="hr_style"> -->
+                    <!-- <a href="rating_per_type.html" class="thumbnail"></a> -->
+                    <!-- <img src="images/RatingPerType.png" alt="rating per type" class="left_small panel-body"> -->
+                    <p class=panel-body>
+                    The average rating of apps in the play store is 4, which is quite good. We have analyzed that categories
+                    with the highest number of apps holds the highest number of reviews as well. However, the average rating per category
+                    is not necessarily related to the same categories with highest number of reviews. Categories such as events,
+                    art and design, and Education holds the highest ratings among all other categories and these categories did
+                    not get the highest number of reviews. So we can conclude that maximum reviews does not mean good ratings. 
+                    </p>
+                </div>
+                <div id="0f643b6b7a3644cd96f713225ae749e0" class="chart-container" style="width:850px; height:400px; "></div>
+                <script>
+                    var chart_0f643b6b7a3644cd96f713225ae749e0 = echarts.init(
+                        document.getElementById('0f643b6b7a3644cd96f713225ae749e0'), 'macarons', {renderer: 'canvas'});
+                    var option_0f643b6b7a3644cd96f713225ae749e0 = {
+
+                "animation": true,
+                "animationThreshold": 2000,
+                "animationDuration": 1000,
+                "animationEasing": "cubicOut",
+                "animationDelay": 0,
+                "animationDurationUpdate": 300,
+                "animationEasingUpdate": "cubicOut",
+                "animationDelayUpdate": 0,
+                "aria": {
+                    "enabled": false
+                },
+                "series": [
+                    {
+                        "type": "bar",
+                        "legendHoverLink": true,
+                        "data": [
+                            4.44,
+                            4.36,
+                            4.36,
+                            4.34,
+                            4.33,
+                            4.3,
+                            4.28,
+                            4.25,
+                            4.25,
+                            4.24,
+                            4.24,
+                            4.23,
+                            4.22,
+                            4.19,
+                            4.18,
+                            4.18,
+                            4.18,
+                            4.18,
+                            4.17,
+                            4.17,
+                            4.16,
+                            4.15,
+                            4.14,
+                            4.12,
+                            4.12,
+                            4.12,
+                            4.1,
+                            4.09,
+                            4.07,
+                            4.04,
+                            4.04,
+                            4.04,
+                            3.97
+                        ],
+                        "realtimeSort": false,
+                        "showBackground": false,
+                        "stackStrategy": "samesign",
+                        "cursor": "pointer",
+                        "barMinHeight": 0,
+                        "barCategoryGap": "20%",
+                        "barGap": "30%",
+                        "large": false,
+                        "largeThreshold": 400,
+                        "seriesLayoutBy": "column",
+                        "datasetIndex": 0,
+                        "clip": true,
+                        "zlevel": 0,
+                        "z": 2,
+                        "label": {
+                            "show": false,
+                            "margin": 8
+                        },
+                        "rippleEffect": {
+                            "show": true,
+                            "brushType": "stroke",
+                            "scale": 2.5,
+                            "period": 4
+                        }
+                    }
+                ],
+                "legend": [
+                    {
+                        "data": [
+                            ""
+                        ],
+                        "selected": {
+                            "": true
+                        },
+                        "show": true,
+                        "padding": 5,
+                        "itemGap": 10,
+                        "itemWidth": 25,
+                        "itemHeight": 14,
+                        "backgroundColor": "transparent",
+                        "borderColor": "#ccc",
+                        "borderWidth": 1,
+                        "borderRadius": 0,
+                        "pageButtonItemGap": 5,
+                        "pageButtonPosition": "end",
+                        "pageFormatter": "{current}/{total}",
+                        "pageIconColor": "#2f4554",
+                        "pageIconInactiveColor": "#aaa",
+                        "pageIconSize": 15,
+                        "animationDurationUpdate": 800,
+                        "selector": false,
+                        "selectorPosition": "auto",
+                        "selectorItemGap": 7,
+                        "selectorButtonGap": 10
+                    }
+                ],
+                "tooltip": {
+                    "show": true,
+                    "trigger": "item",
+                    "triggerOn": "mousemove|click",
+                    "axisPointer": {
+                        "type": "line"
+                    },
+                    "showContent": true,
+                    "alwaysShowContent": false,
+                    "showDelay": 0,
+                    "hideDelay": 100,
+                    "enterable": false,
+                    "confine": false,
+                    "appendToBody": false,
+                    "transitionDuration": 0.4,
+                    "textStyle": {
+                        "fontSize": 14,
+                        "fontColor": "#0f0f0f"
+                    },
+                    "borderWidth": 0,
+                    "padding": 5,
+                    "order": "seriesAsc"
+                },
+                "xAxis": [
+                    {
+                        "show": true,
+                        "scale": false,
+                        "nameLocation": "end",
+                        "nameGap": 15,
+                        "gridIndex": 0,
+                        "axisLabel": {
+                            "show": true,
+                            "rotate": 90,
+                            "margin": 8
+                        },
+                        "inverse": false,
+                        "offset": 0,
+                        "splitNumber": 5,
+                        "minInterval": 0,
+                        "splitLine": {
+                            "show": true,
+                            "lineStyle": {
+                                "show": true,
+                                "width": 1,
+                                "opacity": 1,
+                                "curveness": 0,
+                                "type": "solid"
+                            }
+                        },
+                        "data": [
+                            "EVENTS",
+                            "ART_AND_DESIGN",
+                            "EDUCATION",
+                            "BOOKS_AND_REFERENCE",
+                            "PERSONALIZATION",
+                            "PARENTING",
+                            "BEAUTY",
+                            "SOCIAL",
+                            "GAME",
+                            "HEALTH_AND_FITNESS",
+                            "WEATHER",
+                            "SHOPPING",
+                            "SPORTS",
+                            "AUTO_AND_VEHICLES",
+                            "FAMILY",
+                            "COMICS",
+                            "LIBRARIES_AND_DEMO",
+                            "PRODUCTIVITY",
+                            "FOOD_AND_DRINK",
+                            "MEDICAL",
+                            "PHOTOGRAPHY",
+                            "HOUSE_AND_HOME",
+                            "ENTERTAINMENT",
+                            "FINANCE",
+                            "NEWS_AND_MAGAZINES",
+                            "COMMUNICATION",
+                            "BUSINESS",
+                            "LIFESTYLE",
+                            "TRAVEL_AND_LOCAL",
+                            "MAPS_AND_NAVIGATION",
+                            "TOOLS",
+                            "VIDEO_PLAYERS",
+                            "DATING"
+                        ]
+                    }
+                ],
+                "yAxis": [
+                    {
+                        "name": "Average rating",
+                        "show": true,
+                        "scale": false,
+                        "nameLocation": "end",
+                        "nameGap": 15,
+                        "gridIndex": 0,
+                        "inverse": false,
+                        "offset": 0,
+                        "splitNumber": 5,
+                        "min": 3.0,
+                        "max": 4.5,
+                        "minInterval": 0,
+                        "splitLine": {
+                            "show": true,
+                            "lineStyle": {
+                                "show": true,
+                                "width": 1,
+                                "opacity": 1,
+                                "curveness": 0,
+                                "type": "solid"
+                            }
+                        }
+                    }
+                ],
+                // "title": [
+                //     {
+                //         "show": true,
+                //         "text": "Average ratings by category",
+                //         "target": "blank",
+                //         "subtarget": "blank",
+                //         "padding": 5,
+                //         "itemGap": 10,
+                //         "textAlign": "auto",
+                //         "textVerticalAlign": "auto",
+                //         "triggerEvent": false
+                //     }
+                // ]
+            };
+                    chart_0f643b6b7a3644cd96f713225ae749e0.setOption(option_0f643b6b7a3644cd96f713225ae749e0);
+                </script>
+               
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3 class="text-primary">Vizualization</h3>
+                        <hr class="hr_style">
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-3 col-md-6">
+                                <a href="rating_per_type.html" class="thumbnail">
+                                    <img src="images/RatingPerType.png" alt="Rating Per App Type">
+                                </a>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-6">
+                                <a href="CategoryRating.html" class="thumbnail">
+                                    <img src="images/CategoryRating.png" alt="Rating Per Category">
+                                </a>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-6">
+                                <a href="MaxReviews.html" class="thumbnail">
+                                    <img src="images/MaxReviews.png" alt="Maximum number of Reviews">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
