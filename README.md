@@ -10,6 +10,15 @@ Dataset: Google Play Store Apps | Kaggle
 
 Dataset Link: [https://www.kaggle.com/datasets/lava18/google-play-store-apps](https://www.kaggle.com/datasets/lava18/google-play-store-apps)
 
+### Questions to answer: 
+
+1. Which App category has the highest average rating?
+
+2. Which App has the maximum number of Reviews?
+
+3. What is the Average Rating for Free and Paid Apps?
+
+
 
 ![image](https://user-images.githubusercontent.com/116117065/221661520-1049ffdf-7000-4f0d-8e04-cd954e9efb0c.png)
 
@@ -26,12 +35,16 @@ Dataset Link: [https://www.kaggle.com/datasets/lava18/google-play-store-apps](ht
 5. Your project must include some level of user-driven interaction (e.g., menus, dropdowns, textboxes).
 6. Your final visualization should ideally include at least three views.
 
+
 ## Dashboard View
+
 
 ![image](https://user-images.githubusercontent.com/116117065/221679886-cdc647eb-d415-41ac-96ea-41ca18f172c2.png)
 
 
 ## Link to Dashboard:
+
+https://tanya-qader.github.io/google-play-store-project/index.html
 
 
 
